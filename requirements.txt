@@ -1,0 +1,21 @@
+# ML Economic 1 (Ajey) - runtime dependencies
+#
+# Python 3.11+ (developed on 3.11). Acquisition scripts (fetch_data, fetch_opr,
+# build_publication_lag) are stdlib-only; everything else needs the stack below.
+#
+#   python -m venv .venv && .venv\Scripts\activate      # Windows
+#   pip install -r requirements.txt
+#
+
+pandas>=2.0,<4
+numpy>=1.26,<3
+scipy>=1.11,<2
+statsmodels>=0.14,<1
+lightgbm>=4.0,<5
+streamlit>=1.30,<2
+
+# pandas .to_markdown() used by the report writers
+tabulate>=0.9,<1
+
+# reading/writing data/panel.xlsx
+openpyxl>=3.1,<4

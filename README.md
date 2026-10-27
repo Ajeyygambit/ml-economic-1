@@ -28,6 +28,28 @@ that makes the numbers survive a technical interview.
 
 **Current honest result.** Point forecasts: AR-X (ARDL with exports, CPI, OPR) wins at h=1 - MASE 0.591 vs AR 0.758 on matched origins - while at h=3/6/12 nothing beats the plain AR(AIC) and all pairwise tests are non-significant. VAR never wins once a stability guard and matched origins are enforced. Intervals: quantile LightGBM under-covers (0.64 against a nominal 0.80), conformal over-covers (0.88-0.93); an 80% interval is 11-17 pp wide against a series with sd 6.6 pp. Volatility regimes: forecast error is 2.4x larger in the turbulent state at h=1 (p=0.006) but the effect is not monotone across horizons. Read `reports/model_comparison.md`, `reports/intervals.md`, `reports/arx_var.md` and `reports/regime.md` before quoting any number.
 
+## Running it in VS Code (no copy-pasting)
+
+The code lives in the repository; you open the folder rather than pasting files.
+
+1. **File → Open Folder** → `C:\Users\User\Projects\ml-economic-1`
+   (or clone the private repo first: `git clone https://github.com/Ajeyygambit/ml-economic-1`)
+2. **Terminal → New Terminal**, then:
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate          # Windows PowerShell/cmd
+   pip install -r requirements.txt
+   ```
+3. **Ctrl+Shift+P → "Python: Select Interpreter"** → choose `.venv\Scripts\python.exe`.
+   Do not point it at another environment — the versions matter (`statsmodels` 0.15 changed
+   the Markov-switching API this repo relies on).
+4. Run any script: `python scripts/eda.py`, or the app: `streamlit run app/streamlit_app.py`
+   and Ctrl+click the `localhost:8501` link it prints.
+
+`data/` ships with the exact vintage the reports were built on, so every analysis script runs
+without re-downloading anything. `scripts/fetch_data.py` and `scripts/fetch_opr.py` are the only
+network-dependent steps, and both are stdlib-only.
+
 ## Quick start
 
 ```bash
