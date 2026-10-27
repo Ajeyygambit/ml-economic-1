@@ -23,7 +23,8 @@ that makes the numbers survive a technical interview.
 | Probabilistic intervals (quantile + conformal, coverage audit) | done - `reports/intervals.md` |
 | AR-X / VAR comparison | done - `reports/arx_var.md` |
 | Volatility regimes (Markov switching, real-time labels) | done - `reports/regime.md` |
-| Streamlit app, report, demo video | next |
+| Streamlit decision-support app | done - `app/streamlit_app.py` |
+| Technical report, demo video | next |
 
 **Current honest result.** Point forecasts: AR-X (ARDL with exports, CPI, OPR) wins at h=1 - MASE 0.591 vs AR 0.758 on matched origins - while at h=3/6/12 nothing beats the plain AR(AIC) and all pairwise tests are non-significant. VAR never wins once a stability guard and matched origins are enforced. Intervals: quantile LightGBM under-covers (0.64 against a nominal 0.80), conformal over-covers (0.88-0.93); an 80% interval is 11-17 pp wide against a series with sd 6.6 pp. Volatility regimes: forecast error is 2.4x larger in the turbulent state at h=1 (p=0.006) but the effect is not monotone across horizons. Read `reports/model_comparison.md`, `reports/intervals.md`, `reports/arx_var.md` and `reports/regime.md` before quoting any number.
 
@@ -45,9 +46,26 @@ python scripts/intervals.py              # quantile + conformal intervals, cover
 No dependencies beyond the standard library for the acquisition scripts; `pandas` is needed
 for the availability checker and later modelling stages.
 
+## Application
+
+```bash
+streamlit run app/streamlit_app.py     # http://localhost:8501
+```
+
+Publishes the four horizons with the champion model per horizon (AR-X at h=1, AR(AIC) beyond),
+conformal intervals with their width shown, P(growth < 0), the real-time volatility regime, and
+scenario shocks through the AR-X channel. Every caveat the report makes is on the page: the AR-X
+explains only 5% of the variance at h=1, its OPR coefficient is a six-value rate dummy, the two
+specifications disagree by 3.3 pp at h=1, and the intervals are wide. A markdown brief is
+downloadable.
+
+![app](docs/app_screenshot.png)
+
 ## Layout
 
 ```
+app/
+  streamlit_app.py           decision-support UI (forecasts, intervals, regime, scenarios)
 scripts/
   fetch_data.py              13 catalogues -> panel (stdlib only, every URL logged)
   fetch_opr.py               BNM MPC decisions -> stepped OPR series (+ self-check)

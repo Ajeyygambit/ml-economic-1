@@ -66,3 +66,27 @@ AR scored on all 89.
 | h=3, 6, 12 | AR(AIC) | nothing beats it; fewer parameters is a virtue |
 | intervals | conformal on the point forecast | see reports/intervals.md |
 | guard | VAR stability check before any publication | see section 3 |
+
+---
+
+## 6. What the h=1 champion does and does not do (added after wiring the app)
+
+Fitting the AR-X at the current origin exposed two things that belong in the write-up, not just
+in the app's warnings:
+
+**R² = 0.052 at h=1, on 122 observations.** The model explains about five percent of the variance
+of IPI growth one month ahead. Its backtest MAE (3.53 pp) beats the AR's (4.04 pp) - the
+Diebold-Mariano test says that gap is real - but a 5% R² is a weak relationship, and the point
+forecast is dominated by the intercept (6.01) rather than by the economic channels.
+
+**OPR enters with only six distinct values** (1.75, 2.00, 2.25, 2.50, 2.75, 3.00) across the whole
+sample, so its coefficient (-1.157) is a *rate-regime indicator*, not a marginal effect. A 25 bp
+move appears to shift the forecast by 0.29 pp on the strength of six observations. Any scenario
+that turns that coefficient into a policy elasticity - a slider, a report table, a slide - would
+be overclaiming.
+
+**Consequence at the current origin:** AR-X says +6.9 pp for 2026-11 while the AR says +3.6 pp, a
+3.3 pp disagreement on a series with a 6.6 pp standard deviation. The app therefore prints both,
+flags the disagreement above 1 pp, and labels the h=1 point forecast as the *least* reliable of the
+four rather than the most. The backtest ranking still stands; the interpretability does not
+follow it.
