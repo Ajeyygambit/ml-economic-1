@@ -34,13 +34,23 @@ The code lives in the repository; you open the folder rather than pasting files.
 
 1. **File → Open Folder** → `C:\Users\User\Projects\ml-economic-1`
    (or clone the private repo first: `git clone https://github.com/Ajeyygambit/ml-economic-1`)
-2. **Terminal → New Terminal**, then:
+2. **Terminal → New Terminal**, then create the environment **with Python 3.11**:
    ```bash
-   python -m venv .venv
-   .venv\Scripts\activate          # Windows PowerShell/cmd
+   uv venv .venv --python 3.11
+   uv pip install --python .venv\Scripts\python.exe -r requirements.txt
+   ```
+   No `uv`? Use the uv-managed interpreter directly, or install Python 3.11 from python.org and:
+   ```bash
+   & "$env:APPDATA\uv\python\cpython-3.11-windows-x86_64-none\python.exe" -m venv .venv
+   .venv\Scripts\activate
    pip install -r requirements.txt
    ```
-3. **Ctrl+Shift+P → "Python: Select Interpreter"** → choose `.venv\Scripts\python.exe`.
+   **Do not use `python -m venv .venv` if `python` is 3.14.** On a machine whose default Python is
+   3.14 this produces a venv that imports `numpy` and then dies with
+   `ImportError: Unable to import required dependency numpy` — the wheels and the interpreter
+   version disagree. It is the single most common way this setup fails.
+3. **Ctrl+Shift+P → "Python: Select Interpreter"** → choose `.venv\Scripts\python.exe`, then
+   **Developer: Reload Window** if you just rebuilt the venv.
    Do not point it at another environment — the versions matter (`statsmodels` 0.15 changed
    the Markov-switching API this repo relies on).
 4. Run any script: `python scripts/eda.py`, or the app: `streamlit run app/streamlit_app.py`
@@ -51,6 +61,8 @@ without re-downloading anything. `scripts/fetch_data.py` and `scripts/fetch_opr.
 network-dependent steps, and both are stdlib-only.
 
 ## Quick start
+
+Verified on Python **3.11.16** with pandas 3.1.0, statsmodels 0.15.0, lightgbm 4.7.0, streamlit 1.66.1.
 
 ```bash
 python scripts/fetch_data.py             # pull 13 catalogues -> data/panel_monthly.csv
