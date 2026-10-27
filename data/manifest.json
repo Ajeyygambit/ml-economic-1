@@ -1,0 +1,253 @@
+{
+  "generated_at_utc": "2026-10-26T07:32:57+00:00",
+  "api": "https://api.data.gov.my/data-catalogue",
+  "sources": [
+    {
+      "series": "ipi",
+      "url": "https://api.data.gov.my/data-catalogue?id=ipi",
+      "rows": 407,
+      "columns": [
+        "date",
+        "index",
+        "series",
+        "index_sa"
+      ],
+      "first_date": "2015-01-01",
+      "last_date": "2026-08-01",
+      "fetched_at_utc": "2026-10-26T07:32:48+00:00",
+      "raw_file": "data/raw/ipi.csv",
+      "status": "OK"
+    },
+    {
+      "series": "ipi_1d",
+      "url": "https://api.data.gov.my/data-catalogue?id=ipi_1d",
+      "rows": 1221,
+      "columns": [
+        "date",
+        "index",
+        "series",
+        "section",
+        "index_sa"
+      ],
+      "first_date": "2015-01-01",
+      "last_date": "2026-08-01",
+      "fetched_at_utc": "2026-10-26T07:32:48+00:00",
+      "raw_file": "data/raw/ipi_1d.csv",
+      "status": "OK"
+    },
+    {
+      "series": "cpi_headline_inflation",
+      "url": "https://api.data.gov.my/data-catalogue?id=cpi_headline_inflation",
+      "rows": 7840,
+      "columns": [
+        "date",
+        "division",
+        "inflation_mom",
+        "inflation_yoy"
+      ],
+      "first_date": "1980-02-01",
+      "last_date": "2026-09-01",
+      "fetched_at_utc": "2026-10-26T07:32:49+00:00",
+      "raw_file": "data/raw/cpi_headline_inflation.csv",
+      "status": "OK"
+    },
+    {
+      "series": "cpi_core_inflation",
+      "url": "https://api.data.gov.my/data-catalogue?id=cpi_core_inflation",
+      "rows": 1456,
+      "columns": [
+        "date",
+        "division",
+        "inflation_mom",
+        "inflation_yoy"
+      ],
+      "first_date": "2018-02-01",
+      "last_date": "2026-09-01",
+      "fetched_at_utc": "2026-10-26T07:32:50+00:00",
+      "raw_file": "data/raw/cpi_core_inflation.csv",
+      "status": "OK"
+    },
+    {
+      "series": "lfs_month_sa",
+      "url": "https://api.data.gov.my/data-catalogue?id=lfs_month_sa",
+      "rows": 200,
+      "columns": [
+        "lf",
+        "date",
+        "p_rate",
+        "u_rate",
+        "lf_employed",
+        "lf_unemployed"
+      ],
+      "first_date": "2010-01-01",
+      "last_date": "2026-08-01",
+      "fetched_at_utc": "2026-10-26T07:32:51+00:00",
+      "raw_file": "data/raw/lfs_month_sa.csv",
+      "status": "OK"
+    },
+    {
+      "series": "trade_headline",
+      "url": "https://api.data.gov.my/data-catalogue?id=trade_headline",
+      "rows": 1310,
+      "columns": [
+        "date",
+        "total",
+        "series",
+        "balance",
+        "exports",
+        "imports",
+        "re_exports",
+        "exports_domestic",
+        "imports_retained"
+      ],
+      "first_date": "1990-01-01",
+      "last_date": "2026-09-01",
+      "fetched_at_utc": "2026-10-26T07:32:52+00:00",
+      "raw_file": "data/raw/trade_headline.csv",
+      "status": "OK"
+    },
+    {
+      "series": "exchangerates",
+      "url": "https://api.data.gov.my/data-catalogue?id=exchangerates",
+      "rows": 1785,
+      "columns": [
+        "aed",
+        "aud",
+        "bnd",
+        "cad",
+        "chf",
+        "cny",
+        "egp",
+        "eur",
+        "gbp",
+        "hkd",
+        "idr",
+        "inr",
+        "jpy",
+        "khr",
+        "krw",
+        "mmk",
+        "npr",
+        "nzd",
+        "php",
+        "pkr",
+        "sar",
+        "sgd",
+        "thb",
+        "twd",
+        "usd",
+        "vnd",
+        "xdr",
+        "date",
+        "indicator"
+      ],
+      "first_date": "1997-01-01",
+      "last_date": "2026-09-01",
+      "fetched_at_utc": "2026-10-26T07:32:53+00:00",
+      "raw_file": "data/raw/exchangerates.csv",
+      "status": "OK"
+    },
+    {
+      "series": "interestrates",
+      "url": "https://api.data.gov.my/data-catalogue?id=interestrates",
+      "rows": 5808,
+      "columns": [
+        "bank",
+        "date",
+        "rate",
+        "value"
+      ],
+      "first_date": "1997-01-01",
+      "last_date": "2026-06-01",
+      "fetched_at_utc": "2026-10-26T07:32:54+00:00",
+      "raw_file": "data/raw/interestrates.csv",
+      "status": "OK"
+    },
+    {
+      "series": "ppi",
+      "url": "https://api.data.gov.my/data-catalogue?id=ppi",
+      "rows": 587,
+      "columns": [
+        "date",
+        "index",
+        "series",
+        "index_sa"
+      ],
+      "first_date": "2010-01-01",
+      "last_date": "2026-08-01",
+      "fetched_at_utc": "2026-10-26T07:32:54+00:00",
+      "raw_file": "data/raw/ppi.csv",
+      "status": "OK"
+    },
+    {
+      "series": "monetary_aggregates",
+      "url": "https://api.data.gov.my/data-catalogue?id=monetary_aggregates",
+      "rows": 1944,
+      "columns": [
+        "date",
+        "value",
+        "measure"
+      ],
+      "first_date": "2013-01-01",
+      "last_date": "2026-06-01",
+      "fetched_at_utc": "2026-10-26T07:32:55+00:00",
+      "raw_file": "data/raw/monetary_aggregates.csv",
+      "status": "OK"
+    },
+    {
+      "series": "economic_indicators",
+      "url": "https://api.data.gov.my/data-catalogue?id=economic_indicators",
+      "rows": 427,
+      "columns": [
+        "date",
+        "lagging",
+        "leading",
+        "coincident",
+        "leading_diffusion",
+        "coincident_diffusion"
+      ],
+      "first_date": "1991-01-01",
+      "last_date": "2026-07-01",
+      "fetched_at_utc": "2026-10-26T07:32:56+00:00",
+      "raw_file": "data/raw/economic_indicators.csv",
+      "status": "OK"
+    },
+    {
+      "series": "opr",
+      "url": "https://www.bnm.gov.my/monetary-stability/opr-decisions/-/tag/opr-YYYY",
+      "source": "Bank Negara Malaysia (MPC decisions, walked by year tag)",
+      "raw_file": "data/opr_monthly.csv",
+      "status": "OK"
+    },
+    {
+      "series": "gdp_qtr_real_sa",
+      "url": "https://api.data.gov.my/data-catalogue?id=gdp_qtr_real_sa",
+      "rows": 46,
+      "columns": [
+        "date",
+        "value",
+        "series"
+      ],
+      "first_date": "2015-01-01",
+      "last_date": "2026-04-01",
+      "fetched_at_utc": "2026-10-26T07:32:56+00:00",
+      "raw_file": "data/raw/gdp_qtr_real_sa.csv",
+      "status": "OK"
+    },
+    {
+      "series": "gdp_qtr_real",
+      "url": "https://api.data.gov.my/data-catalogue?id=gdp_qtr_real",
+      "rows": 133,
+      "columns": [
+        "date",
+        "value",
+        "series"
+      ],
+      "first_date": "2015-01-01",
+      "last_date": "2026-04-01",
+      "fetched_at_utc": "2026-10-26T07:32:57+00:00",
+      "raw_file": "data/raw/gdp_qtr_real.csv",
+      "status": "OK"
+    }
+  ]
+}

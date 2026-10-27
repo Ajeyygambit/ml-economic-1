@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Streamlit / local secrets
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Transient run logs (the reports themselves are kept - they are the evidence)
+reports/*_log.txt
+
+# Keep everything else: data/ (about 1.5 MB) is committed on purpose so the
+# pipeline is verifiable against the exact vintage the reports were built on.

@@ -1,0 +1,17 @@
+# Rolling-origin backtest - ML Economic 1 (Ajey)
+
+Target: `ipi_growth_yoy`. Expanding window, 36+ training pairs required.
+MASE is relative to the random walk: < 1 beats 'tomorrow looks like today'.
+
+|   h |   n_origins |   rw_MAE |   rw_RMSE |   rw_bias |   mean3_MAE |   mean3_RMSE |   mean3_bias |   ar_MAE |   ar_RMSE |   ar_bias |   lgbm_MAE |   lgbm_RMSE |   lgbm_bias |   lgbm_leaky_MAE |   lgbm_leaky_RMSE |   lgbm_leaky_bias |   lgbm_MASE |   ar_MASE |   leaky_MASE |
+|----:|------------:|---------:|----------:|----------:|------------:|-------------:|-------------:|---------:|----------:|----------:|-----------:|------------:|------------:|-----------------:|------------------:|------------------:|------------:|----------:|-------------:|
+|   1 |          77 |    6.201 |    12.069 |    -0.189 |       5.952 |       10.65  |       -0.276 |    4.842 |     9.221 |    -0.811 |      5.312 |       8.96  |      -1.941 |            4.667 |             8.596 |            -0.708 |       0.857 |     0.781 |        0.753 |
+|   3 |          75 |    5.944 |    10.988 |    -1.124 |       5.272 |        9.143 |       -1.143 |    3.634 |     7.345 |    -1.605 |      4.737 |       8.067 |      -2.414 |            4.601 |             7.957 |            -1.989 |       0.797 |     0.611 |        0.774 |
+|   6 |          72 |    5.76  |    10.799 |    -1.312 |       5.713 |        9.67  |       -1.353 |    3.805 |     7.542 |    -1.901 |      5.942 |       9.233 |      -2.026 |            5.41  |             8.183 |            -2.26  |       1.032 |     0.661 |        0.939 |
+|  12 |          66 |    6.435 |    10.797 |    -1.811 |       5.636 |        8.967 |       -1.813 |    3.71  |     7.313 |    -2.02  |      5.07  |       9.223 |      -0.468 |            4.501 |             8.219 |            -1.414 |       0.788 |     0.577 |        0.699 |
+
+## How to read this
+
+- `rw` is the floor, not a straw man: for a yoy growth series it is genuinely hard to beat.
+- `lgbm_leaky` reads features without the publication lag. It is a diagnostic of leakage, never a candidate model - the gap between it and `lgbm` is what a dishonest backtest would have claimed as skill.
+- Small n by construction: the sample starts in 2016 and the mask removes the newest two months from every feature.

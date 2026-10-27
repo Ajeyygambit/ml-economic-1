@@ -1,0 +1,5 @@
+h,n_origins,rw_MASE,default_MASE,default_MAE,regularised_MASE,regularised_MAE,heavy_MASE,heavy_MAE,linear_leaves_MASE,linear_leaves_MAE
+1,77,1.0,0.87,5.393,0.719,4.461,0.672,4.168,1.082,6.711
+3,75,1.0,0.802,4.769,0.666,3.959,0.609,3.621,0.838,4.981
+6,72,1.0,1.059,6.1,0.764,4.401,0.75,4.319,1.264,7.279
+12,66,1.0,0.775,4.989,0.7,4.502,0.708,4.554,0.789,5.075
