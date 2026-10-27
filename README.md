@@ -3,6 +3,8 @@
 Forecasting Malaysian economic conditions 3-12 months ahead, with the validation discipline
 that makes the numbers survive a technical interview.
 
+**Repo:** https://github.com/Ajeyygambit/ml-economic-1 (private)
+
 **Primary target:** industrial production growth (IPI, yoy), horizons h = 1, 3, 6, 12 months.
 **Secondary:** manufacturing IPI, CPI inflation, unemployment; regime detection; scenario shocks.
 
