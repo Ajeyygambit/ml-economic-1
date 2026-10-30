@@ -1,0 +1,34 @@
+column,newest_obs,months_behind_today,documented_release_lag,release_practice,lag_months_used,flag
+ipi_index,2026-08,2,2,DOSM IPI release ~2 months after reference month,2,OK
+ipi_index_sa,2026-08,2,2,DOSM IPI release ~2 months after reference month,2,OK
+ipi_mining_index,2026-08,2,2,DOSM IPI release ~2 months after reference month,2,OK
+ipi_manufacturing_index,2026-08,2,2,DOSM IPI release ~2 months after reference month,2,OK
+ipi_electricity_index,2026-08,2,2,DOSM IPI release ~2 months after reference month,2,OK
+cpi_inflation_yoy,2026-09,1,1,DOSM CPI release ~3-4 weeks after month end,1,OK
+cpi_inflation_mom,2026-09,1,1,DOSM CPI release ~3-4 weeks after month end,1,OK
+cpi_div01_yoy,2026-09,1,1,DOSM CPI release ~3-4 weeks after month end,1,OK
+cpi_div04_yoy,2026-09,1,1,DOSM CPI release ~3-4 weeks after month end,1,OK
+u_rate,2026-08,2,2,DOSM LFS monthly release ~5-6 weeks after month end,2,OK
+p_rate,2026-08,2,2,DOSM LFS monthly release ~5-6 weeks after month end,2,OK
+lf_employed,2026-08,2,2,DOSM LFS monthly release ~5-6 weeks after month end,2,OK
+exports_rm_mil,2026-09,1,1,DOSM trade release ~4-5 weeks after month end,1,OK
+imports_rm_mil,2026-09,1,1,DOSM trade release ~4-5 weeks after month end,1,OK
+trade_balance_rm_mil,2026-09,1,1,DOSM trade release ~4-5 weeks after month end,1,OK
+exports_growth_yoy,2026-09,1,1,DOSM trade release ~4-5 weeks after month end,1,OK
+imports_growth_yoy,2026-09,1,1,DOSM trade release ~4-5 weeks after month end,1,OK
+myr_per_usd,2026-09,1,0,BNM daily noon rate; monthly mean only complete at month end,1,OK
+blr,2026-06,4,4,"BNM monthly interest-rate statistics, ~3-4 months",4,OK
+fdr_1mo,2026-06,4,4,"BNM monthly interest-rate statistics, ~3-4 months",4,OK
+fdr_3mo,2026-06,4,4,"BNM monthly interest-rate statistics, ~3-4 months",4,OK
+ppi_growth_yoy,2026-08,2,2,DOSM PPI release ~2 months after reference month,2,OK
+m2_rm_mil,2026-06,4,4,"BNM monetary aggregates, ~3-4 months",4,OK
+m3_rm_mil,2026-06,4,4,"BNM monetary aggregates, ~3-4 months",4,OK
+li_leading,2026-07,3,3,"DOSM Malaysian Economic Indicators, ~2-3 months",3,OK
+li_coincident,2026-07,3,3,"DOSM Malaysian Economic Indicators, ~2-3 months",3,OK
+li_lagging,2026-07,3,3,"DOSM Malaysian Economic Indicators, ~2-3 months",3,OK
+li_leading_diffusion,2026-07,3,3,"DOSM Malaysian Economic Indicators, ~2-3 months",3,OK
+opr,2026-10,0,0,MPC decision published 3pm on decision day - available immediately,0,OK
+opr_changed_in_month,2026-10,0,0,MPC decision published 3pm on decision day,0,OK
+ipi_growth_mom,2026-08,2,2,DOSM IPI release ~2 months after reference month,2,OK
+ipi_growth_yoy,2026-08,2,2,DOSM IPI release ~2 months after reference month,2,OK
+cpi_core_yoy,2026-09,1,1,DOSM CPI release ~3-4 weeks after month end,1,OK
